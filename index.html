@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio pribadi — developer, designer, dan creator.">
+  <title>Portfolio Saya</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loader">
+    <div class="loader-content">
+      <div class="loader-spinner"></div>
+      <span class="loader-text">Loading Portofolio...</span>
+    </div>
+  </div>
+
+  <!-- Background Canvas for Particles -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="cursor-spotlight" id="cursorSpotlight"></div>
+
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#home" class="logo">Portfolio Nathan<span>.</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Buka menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#skills">Keahlian</a></li>
+        <li><a href="#projects">Proyek</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="hero-greeting">Halo, saya</p>
+          <h1 class="hero-name">Nathan <span class="gradient-text">Ahnaf</span> Hafiz</h1>
+          <h2 class="hero-title"><span id="typewriter-text">Web Developer</span><span class="typewriter-cursor">|</span></h2>
+          <p class="hero-desc">
+            Saya membuat website yang modern, interaktif, cepat, dan responsif. 
+            Tertarik kolaborasi? Mari terhubung.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">Lihat Proyek</a>
+            <a href="#contact" class="btn btn-outline">Hubungi Saya</a>
+          </div>
+          <div class="hero-socials">
+            <a href=https://github.com/ecsztassy target="_blank" rel="noopener noreferrer" title="GitHub">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/nathanahnafhafiz" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="https://www.instagram.com/ecszzzz/" target="_blank" rel="noopener noreferrer" title="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="hero-visual">
+          <div class="profile-card">
+            <div class="profile-glow"></div>
+            <div class="profile-image-container">
+              <img src="images/profile.jpg" alt="Aditya Rizky Ramadhan" class="profile-img">
+            </div>
+            
+            <div class="floating-badge badge-1" title="React">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="badge-icon"><circle cx="12" cy="12" r="2"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" opacity="0.2"></path><path d="M12 5c-3.9 0-7 3.1-7 7s3.1 7 7 7c2 0 3.8-.8 5.1-2.2M12 2c2 2 3 5 3 10s-1 8-3 10c-2-2-3-5-3-10S10 4 12 2z"></path></svg>
+            </div>
+            <div class="floating-badge badge-2" title="JavaScript">
+              <span class="badge-text">JS</span>
+            </div>
+            <div class="floating-badge badge-3" title="Node.js">
+              <span class="badge-text">Node</span>
+            </div>
+            <div class="floating-badge badge-4" title="CSS3">
+              <span class="badge-text">CSS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title">Tentang Saya</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              Saya seorang developer yang suka membangun hal-hal di web —
+              dari landing page sederhana hingga aplikasi interaktif.
+            </p>
+            <p>
+              Fokus saya ada di pengalaman pengguna, kode yang bersih,
+              dan desain yang modern. Saat ini saya terus belajar dan
+              mengeksplorasi teknologi baru.
+            </p>
+          </div>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">Tahun belajar</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">10+</span>
+              <span class="stat-label">Proyek selesai</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Teknologi</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <h2 class="section-title">Keahlian</h2>
+        <div class="skills-grid">
+          <article class="skill-card">
+            <div class="skill-icon">&#60;/&#62;</div>
+            <h3>Frontend</h3>
+            <p>HTML, CSS, JavaScript, responsive design</p>
+          </article>
+          <article class="skill-card">
+            <div class="skill-icon">&#9881;</div>
+            <h3>Backend</h3>
+            <p>Node.js, REST API, database dasar</p>
+          </article>
+          <article class="skill-card">
+            <div class="skill-icon">&#10024;</div>
+            <h3>Desain</h3>
+            <p>UI/UX, layout modern, tipografi</p>
+          </article>
+          <article class="skill-card">
+            <div class="skill-icon">&#128736;</div>
+            <h3>Tools</h3>
+            <p>Git, VS Code, Figma, deployment</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section-title">Proyek</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-image project-image-1"></div>
+            <div class="project-body">
+              <h3>Landing Page</h3>
+              <p>Halaman promosi produk dengan animasi halus dan desain minimalis.</p>
+              <div class="project-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JS</span>
+              </div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-image project-image-2"></div>
+            <div class="project-body">
+              <h3>CHILL Movie Streaming App</h3>
+              <p>Aplikasi streaming dan katalog film interaktif dengan user interface yang premium dan responsif.</p>
+              <div class="project-tags">
+                <span>React</span>
+                <span>JSX</span>
+                <span>Vite</span>
+                <span>API</span>
+              </div>
+              <a href="https://movie-app-chill-jsx.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">Kunjungi Situs &rarr;</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-image project-image-3"></div>
+            <div class="project-body">
+              <h3>Portfolio Website</h3>
+              <p>Website profil pribadi — seperti halaman yang kamu lihat sekarang.</p>
+              <div class="project-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <h2 class="section-title">Kontak</h2>
+        <p class="contact-intro">Punya ide proyek atau ingin ngobrol? Kirim pesan lewat form ini.</p>
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <label for="name">Nama</label>
+            <input type="text" id="name" name="name" placeholder="Nama kamu" required>
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="contoh@gmail.com" required>
+          </div>
+          <div class="form-row">
+            <label for="message">Pesan</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tulis pesanmu..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+          <p class="form-note" id="formNote" hidden>Pesan berhasil dikirim! (demo — belum terhubung ke server)</p>
+        </form>
+        <div class="contact-links">
+          <a href="mailto:nathanahnaf6@gmail.com">nathanahnaf6@gmail.com</a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Nathan Ahnaf Hafiz. Dibuat dengan HTML, CSS &amp; JavaScript.</p>
+    </div>
+  </footer>
+
+  <!-- Scroll To Top Button -->
+  <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Kembali ke atas">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
