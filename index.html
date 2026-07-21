@@ -136,7 +136,7 @@
           <article class="skill-card">
             <div class="skill-icon">&#9881;</div>
             <h3>Backend</h3>
-            <p>Node.js, REST API, Mysql</p>
+            <p>Node.js, Php, Mysql, RESTful API</p>
           </article>
           <article class="skill-card">
             <div class="skill-icon">&#10024;</div>
@@ -146,7 +146,7 @@
           <article class="skill-card">
             <div class="skill-icon">&#128736;</div>
             <h3>Tools</h3>
-            <p>Git, GitHub, VS Code, Figma, deployment</p>
+            <p>Git, GitHub, VS Code, Figma, Vercel, Postman</p>
           </article>
         </div>
       </div>
@@ -216,6 +216,10 @@
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
           </div>
+          <div class="form-row" style="position:absolute; left:-9999px;" aria-hidden="true">
+  <label for="company">Company</label>
+  <input type="text" id="company" name="company" tabindex="-1" autocomplete="off">
+</div>
           <button type="submit" class="btn btn-primary">Send message</button>
           <p class="form-note" id="formNote" hidden>Message sent successfully! (demo — not yet connected to server)</p>
         </form>

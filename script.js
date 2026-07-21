@@ -75,13 +75,44 @@ fadeElements.forEach((el) => fadeObserver.observe(el));
 
 // Contact form (demo)
 if (contactForm) {
-  contactForm.addEventListener("submit", (e) => {
+  contactForm.addEventListener("submit", async (e) => {
     e.preventDefault();
-    formNote.hidden = false;
-    contactForm.reset();
-    setTimeout(() => {
-      formNote.hidden = true;
-    }, 4000);
+
+    const submitBtn = contactForm.querySelector("button[type=submit]");
+    const formData = new FormData(contactForm);
+    const payload = Object.fromEntries(formData.entries());
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Mengirim...";
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+
+      const data = await res.json();
+
+      if (res.ok && data.success) {
+        formNote.textContent = "Pesan berhasil dikirim!";
+        formNote.style.color = "#4ade80";
+        formNote.hidden = false;
+        contactForm.reset();
+      } else {
+        formNote.textContent = data.error || "Gagal mengirim pesan. Coba lagi.";
+        formNote.style.color = "#f87171";
+        formNote.hidden = false;
+      }
+    } catch (err) {
+      formNote.textContent = "Terjadi kesalahan jaringan. Coba lagi.";
+      formNote.style.color = "#f87171";
+      formNote.hidden = false;
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Send message";
+      setTimeout(() => { formNote.hidden = true; }, 5000);
+    }
   });
 }
 
