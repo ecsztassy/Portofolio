@@ -646,8 +646,11 @@ a {
 .project-image-3 {
   background-image: url("images/3.png");;
 }
-.project-image-3 {
+.project-image-4 {
   background-image: url("images/4.png");;
+}
+.project-image-5 {
+  background-image: url("images/5.png");;
 }
 
 .project-body {
