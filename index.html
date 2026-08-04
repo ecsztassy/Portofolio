@@ -23,38 +23,70 @@
   <canvas id="bg-canvas"></canvas>
   <div class="cursor-spotlight" id="cursorSpotlight"></div>
 
-  <header class="header" id="header">
-    <nav class="nav container">
-      <a href="#home" class="logo">NathanAhnaf<span>.</span></a>
-      <button class="nav-toggle" id="navToggle" aria-label="Buka menu">
-        <span></span>
-        <span></span>
-        <span></span>
+<header class="header" id="header">
+  <nav class="nav container">
+    <a href="#home" class="logo">NathanAhnaf<span>.</span></a>
+    
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" data-lang-en="Home" data-lang-id="Beranda">Home</a></li>
+      <li><a href="#about" data-lang-en="About" data-lang-id="Tentang">About</a></li>
+      <li><a href="#skills" data-lang-en="Skills" data-lang-id="Keahlian">Skills</a></li>
+      <li><a href="#projects" data-lang-en="Projects" data-lang-id="Proyek">Projects</a></li>
+      <li><a href="#contact" data-lang-en="Contact" data-lang-id="Kontak">Contact</a></li>
+    </ul>
+
+    <!-- Controls / Action Buttons -->
+    <div class="nav-controls">
+      <!-- Button Translate ID/ENG -->
+      <button class="lang-btn" id="langToggle" aria-label="Ganti Bahasa">
+        <span class="lang-text">ID</span>
       </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+
+      <!-- Button Theme Dark/Light -->
+      <button class="theme-btn" id="themeToggle" aria-label="Ganti Tema">
+        <!-- Icon Sun (Light Mode) -->
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <!-- Icon Moon (Dark Mode) -->
+        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Buka menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+</header>
 
   <main>
     <section class="hero" id="home">
       <div class="container hero-grid">
         <div class="hero-content">
-          <p class="hero-greeting">Hi, I'm</p>
+          <p class="hero-greeting" data-lang-en="Hi, I'm" data-lang-id="Halo, Saya">Hi, I'm</p>
           <h1 class="hero-name">Nathan <span class="gradient-text">Ahnaf</span> Hafiz</h1>
-          <h2 class="hero-title"><span id="typewriter-text">Web Developer</span><span class="typewriter-cursor">|</span></h2>
-          <p class="hero-desc">
-            Building modern, responsive, and user focused web experiences.
-          </p>
+          <h2 class="hero-title"><span id="typewriter-text"></span><span class="typewriter-cursor">|</span></h2>
+         <p class="hero-desc" 
+         data-lang-en="Building modern, responsive, and user focused web experiences." 
+         data-lang-id="Membangun pengalaman web yang modern, responsif, dan berfokus pada pengguna.">
+        Building modern, responsive, and user focused web experiences.
+      </p>
           <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">View Project</a>
-            <a href="#contact" class="btn btn-outline">Contact Me</a>
-          </div>
+  <a href="#projects" class="btn btn-primary" data-lang-en="View Project" data-lang-id="Lihat Proyek">View Project</a>
+  <a href="#contact" class="btn btn-outline" data-lang-en="Contact Me" data-lang-id="Hubungi Saya">Contact Me</a>
+</div>
           <div class="hero-socials">
             <a href=https://github.com/ecsztassy target="_blank" rel="noopener noreferrer" title="GitHub">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
@@ -94,39 +126,41 @@
 
     <section class="section" id="about">
       <div class="container">
-        <h2 class="section-title">About Me</h2>
+        <h2 class="section-title" data-lang-en="About Me" data-lang-id="Tentang Saya">About Me</h2>
         <div class="about-grid">
           <div class="about-text">
-            <p>
-              I'm a developer who enjoys building for the web,
-              from simple landing pages to interactive web applications.
-            </p>
-            <p>
-              I focus on user experience, clean code, and modern design.
-              I'm always learning and exploring new technologies.
-            </p>
+           <p data-lang-en="I'm a developer who enjoys building for the web, from simple landing pages to interactive web applications." 
+   data-lang-id="Saya adalah seorang pengembang yang suka membangun untuk web, dari landing page sederhana hingga aplikasi web interaktif.">
+  I'm a developer who enjoys building for the web,
+  from simple landing pages to interactive web applications.
+</p>
+<p data-lang-en="I focus on user experience, clean code, and modern design. I'm always learning and exploring new technologies." 
+   data-lang-id="Saya berfokus pada pengalaman pengguna, kode yang bersih, dan desain modern. Saya selalu belajar dan menjelajahi teknologi baru.">
+  I focus on user experience, clean code, and modern design.
+  I'm always learning and exploring new technologies.
+</p>
           </div>
           <div class="about-stats">
-            <div class="stat">
-              <span class="stat-number">3+</span>
-              <span class="stat-label">Years of study</span>
-            </div>
-            <div class="stat">
-              <span class="stat-number">5+</span>
-              <span class="stat-label">Project completed</span>
-            </div>
-            <div class="stat">
-              <span class="stat-number">5+</span>
-              <span class="stat-label">Technology</span>
-            </div>
-          </div>
+  <div class="stat">
+    <span class="stat-number">3+</span>
+    <span class="stat-label" data-lang-en="Years of study" data-lang-id="Tahun Belajar">Years of study</span>
+  </div>
+  <div class="stat">
+    <span class="stat-number">5+</span>
+    <span class="stat-label" data-lang-en="Project completed" data-lang-id="Proyek Selesai">Project completed</span>
+  </div>
+  <div class="stat">
+    <span class="stat-number">5+</span>
+    <span class="stat-label" data-lang-en="Technology" data-lang-id="Teknologi Dikuasai">Technology</span>
+  </div>
+</div>
         </div>
       </div>
     </section>
 
     <section class="section section-alt" id="skills">
       <div class="container">
-        <h2 class="section-title">Skills</h2>
+        <h2 class="section-title" data-lang-en="Skills" data-lang-id="Keahlian">Skills</h2>
         <div class="skills-grid">
           <article class="skill-card">
             <div class="skill-icon">&#60;/&#62;</div>
@@ -152,114 +186,161 @@
       </div>
     </section>
 
-    <section class="section" id="projects">
-      <div class="container">
-        <h2 class="section-title">My Projects</h2>
-        <div class="projects-grid">
-          <article class="project-card">
-            <div class="project-image project-image-1"></div>
-            <div class="project-body">
-              <h3>To-do-list</h3>
-              <p>A simple and intuitive task management application to organize, track, and complete daily tasks efficiently.</p>
-              <div class="project-tags">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JS</span>
-              </div>
-              <a href="https://to-do-list-nathan-ahnaf.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">Visit Site &rarr;</a>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-image project-image-2"></div>
-            <div class="project-body">
-              <h3>CHILL Movie Streaming App</h3>
-              <p>An interactive movie streaming and catalog app with a premium and responsive user interface.</p>
-              <div class="project-tags">
-                <span>React</span>
-                <span>JSX</span>
-                <span>Vite</span>
-                <span>API</span>
-              </div>
-              <a href="https://movie-app-chill-jsx.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">Visit Site &rarr;</a>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-image project-image-3"></div>
-            <div class="project-body">
-              <h3>Portfolio Website</h3>
-              <p>Personal profile websites, like the page you're viewing now.</p>
-              <div class="project-tags">
-                <span>HTML</span>
-                <span>CSS</span>
-              </div>
-              <a href="https://portofolio-self-pi-42.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">Visit Site &rarr;</a>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-image project-image-4"></div>
-            <div class="project-body">
-              <h3>Stock and Cashier Information System</h3>
-              <p>A web-based application for managing inventory, processing sales transactions, and monitoring stock efficiently. Designed to simplify daily business operations with an intuitive and user-friendly interface.</p>
-              <div class="project-tags">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>PHP</span>
-                <span>JS</span>
-                <span>Mysql</span>
-              </div>
-              <a href="https://stok-kasir-nathan.freedev.app/" target="_blank" rel="noopener noreferrer" class="project-link">Visit Site &rarr;</a>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-image project-image-5"></div>
-            <div class="project-body">
-              <h3>Olt & Onu Monitor</h3>
-              <p>The OLT Monitoring System is a web application for monitoring Optical Line Terminal (OLT) devices. It provides a monitoring dashboard, user authentication, and data management features to simplify network device management.</p>
-              <div class="project-tags">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>PHP</span>
-                <span>CI3</span>
-                <span>Mysql</span>
-              </div>
-              <a href="https://olt-monitor-nathan.freedev.app/" target="_blank" rel="noopener noreferrer" class="project-link">Visit Site &rarr;</a>
-            </div>
-          </article>
+   <section class="section" id="projects">
+  <div class="container">
+    <h2 class="section-title" data-lang-en="My Projects" data-lang-id="Proyek Saya">My Projects</h2>
+    <div class="projects-grid">
+      
+      <!-- Project 1 -->
+      <article class="project-card">
+        <div class="project-image project-image-1"></div>
+        <div class="project-body">
+          <h3 data-lang-en="To-do-list" data-lang-id="Daftar Tugas (To-do-list)">To-do-list</h3>
+          <p data-lang-en="A simple and intuitive task management application to organize, track, and complete daily tasks efficiently."
+             data-lang-id="Aplikasi manajemen tugas yang sederhana dan intuitif untuk mengatur, melacak, dan menyelesaikan tugas harian secara efisien.">
+            A simple and intuitive task management application to organize, track, and complete daily tasks efficiently.
+          </p>
+          <div class="project-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JS</span>
+          </div>
+          <a href="https://to-do-list-nathan-ahnaf.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link" data-lang-en="Visit Site &rarr;" data-lang-id="Kunjungi Situs &rarr;">Visit Site &rarr;</a>
         </div>
-      </div>
-    </section>
+      </article>
 
-    <section class="section section-alt" id="contact">
-      <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <p class="contact-intro">Have a project idea or want to chat? Send a message using this form.</p>
-        <form class="contact-form" id="contactForm">
-          <div class="form-row">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name" required>
+      <!-- Project 2 -->
+      <article class="project-card">
+        <div class="project-image project-image-2"></div>
+        <div class="project-body">
+          <h3 data-lang-en="CHILL Movie Streaming App" data-lang-id="Aplikasi Streaming Film CHILL">CHILL Movie Streaming App</h3>
+          <p data-lang-en="An interactive movie streaming and catalog app with a premium and responsive user interface."
+             data-lang-id="Aplikasi katalog dan streaming film interaktif dengan antarmuka pengguna yang premium dan responsif.">
+            An interactive movie streaming and catalog app with a premium and responsive user interface.
+          </p>
+          <div class="project-tags">
+            <span>React</span>
+            <span>JSX</span>
+            <span>Vite</span>
+            <span>API</span>
           </div>
-          <div class="form-row">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
-          </div>
-          <div class="form-row">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
-          </div>
-          <div class="form-row" style="position:absolute; left:-9999px;" aria-hidden="true">
-  <label for="company">Company</label>
-  <input type="text" id="company" name="company" tabindex="-1" autocomplete="off">
-</div>
-          <button type="submit" class="btn btn-primary">Send message</button>
-          <p class="form-note" id="formNote" hidden>Message sent successfully! (demo — not yet connected to server)</p>
-        </form>
-        <div class="contact-links">
-          <a href="mailto:nathanahnaf6@gmail.com">nathanahnaf6@gmail.com</a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://movie-app-chill-jsx.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link" data-lang-en="Visit Site &rarr;" data-lang-id="Kunjungi Situs &rarr;">Visit Site &rarr;</a>
         </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project-card">
+        <div class="project-image project-image-3"></div>
+        <div class="project-body">
+          <h3 data-lang-en="Portfolio Website" data-lang-id="Situs Web Portofolio">Portfolio Website</h3>
+          <p data-lang-en="Personal profile websites, like the page you're viewing now."
+             data-lang-id="Situs web profil pribadi, seperti halaman yang sedang Anda lihat sekarang.">
+            Personal profile websites, like the page you're viewing now.
+          </p>
+          <div class="project-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+          </div>
+          <a href="https://portofolio-self-pi-42.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link" data-lang-en="Visit Site &rarr;" data-lang-id="Kunjungi Situs &rarr;">Visit Site &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Project 4 -->
+      <article class="project-card">
+        <div class="project-image project-image-4"></div>
+        <div class="project-body">
+          <h3 data-lang-en="Stock and Cashier Information System" data-lang-id="Sistem Informasi Stok dan Kasir">Stock and Cashier Information System</h3>
+          <p data-lang-en="A web-based application for managing inventory, processing sales transactions, and monitoring stock efficiently. Designed to simplify daily business operations with an intuitive and user-friendly interface."
+             data-lang-id="Aplikasi berbasis web untuk mengelola inventaris, memproses transaksi penjualan, dan memantau stok secara efisien. Dirancang untuk mempermudah operasional bisnis harian dengan antarmuka yang intuitif dan ramah pengguna.">
+            A web-based application for managing inventory, processing sales transactions, and monitoring stock efficiently. Designed to simplify daily business operations with an intuitive and user-friendly interface.
+          </p>
+          <div class="project-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>PHP</span>
+            <span>JS</span>
+            <span>Mysql</span>
+          </div>
+          <a href="https://stok-kasir-nathan.freedev.app/" target="_blank" rel="noopener noreferrer" class="project-link" data-lang-en="Visit Site &rarr;" data-lang-id="Kunjungi Situs &rarr;">Visit Site &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Project 5 -->
+      <article class="project-card">
+        <div class="project-image project-image-5"></div>
+        <div class="project-body">
+          <h3 data-lang-en="Olt & Onu Monitor" data-lang-id="Monitoring OLT & ONU">Olt & Onu Monitor</h3>
+          <p data-lang-en="The OLT Monitoring System is a web application for monitoring Optical Line Terminal (OLT) devices. It provides a monitoring dashboard, user authentication, and data management features to simplify network device management."
+             data-lang-id="Sistem Pemantauan OLT adalah aplikasi web untuk memantau perangkat Optical Line Terminal (OLT). Menyediakan dasbor pemantauan, autentikasi pengguna, dan fitur manajemen data untuk mempermudah pengelolaan perangkat jaringan.">
+            The OLT Monitoring System is a web application for monitoring Optical Line Terminal (OLT) devices. It provides a monitoring dashboard, user authentication, and data management features to simplify network device management.
+          </p>
+          <div class="project-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>PHP</span>
+            <span>CI3</span>
+            <span>Mysql</span>
+          </div>
+          <a href="https://olt-monitor-nathan.freedev.app/" target="_blank" rel="noopener noreferrer" class="project-link" data-lang-en="Visit Site &rarr;" data-lang-id="Kunjungi Situs &rarr;">Visit Site &rarr;</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+  <section class="section section-alt" id="contact">
+  <div class="container">
+    <h2 class="section-title" data-lang-en="Contact" data-lang-id="Kontak">Contact</h2>
+    <p class="contact-intro" 
+       data-lang-en="Have a project idea or want to chat? Send a message using this form." 
+       data-lang-id="Punya ide proyek atau ingin mengobrol? Kirim pesan menggunakan formulir ini.">
+      Have a project idea or want to chat? Send a message using this form.
+    </p>
+    
+    <form class="contact-form" id="contactForm">
+      <div class="form-row">
+        <label for="name" data-lang-en="Name" data-lang-id="Nama">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" 
+               data-lang-placeholder-en="Your name" 
+               data-lang-placeholder-id="Nama Anda" required>
       </div>
-    </section>
+
+      <div class="form-row">
+        <label for="email" data-lang-en="Email" data-lang-id="Email">Email</label>
+        <input type="email" id="email" name="email" placeholder="example@gmail.com" 
+               data-lang-placeholder-en="example@gmail.com" 
+               data-lang-placeholder-id="contoh@gmail.com" required>
+      </div>
+
+      <div class="form-row">
+        <label for="message" data-lang-en="Message" data-lang-id="Pesan">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message..." 
+                  data-lang-placeholder-en="Write your message..." 
+                  data-lang-placeholder-id="Tulis pesan Anda..." required></textarea>
+      </div>
+
+      <!-- Honeypot field (diabaikan dari terjemahan agar tetap tersembunyi) -->
+      <div class="form-row" style="position:absolute; left:-9999px;" aria-hidden="true">
+        <label for="company">Company</label>
+        <input type="text" id="company" name="company" tabindex="-1" autocomplete="off">
+      </div>
+
+      <button type="submit" class="btn btn-primary" data-lang-en="Send message" data-lang-id="Kirim pesan">Send message</button>
+      <p class="form-note" id="formNote" hidden 
+         data-lang-en="Message sent successfully! (demo — not yet connected to server)" 
+         data-lang-id="Pesan berhasil dikirim! (demo — belum terhubung ke server)">
+        Message sent successfully! (demo — not yet connected to server)
+      </p>
+    </form>
+
+    <div class="contact-links">
+      <a href="mailto:nathanahnaf6@gmail.com">nathanahnaf6@gmail.com</a>
+      <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+  </div>
+</section>
   </main>
 
   <footer class="footer">
